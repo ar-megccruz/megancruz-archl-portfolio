@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megan Cristel B. Cruz - Portfolio</title>
+    
+    <!-- 
+      LIBRARIES 
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: {
+                            400: '#a1a1aa',
+                            600: '#52525b', 
+                            700: '#3f3f46',
+                            750: '#333338',
+                            800: '#27272a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- 
+      CUSTOM CSS 
+    -->
+    <style>
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        
+        /* Animation Keyframes */
+        @keyframes drawPotrace {
+            to { stroke-dashoffset: 0; }
+        }
+        @keyframes fillPotrace {
+            from { fill: transparent; }
+            to { fill: currentColor; }
+        }
+        @keyframes slideUpFade {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Animation Class for the SVG Logo */
+        .draw-potrace {
+            stroke: currentColor;
+            stroke-width: 15px; 
+            stroke-dasharray: 10000; 
+            stroke-dashoffset: 10000;
+            fill: transparent;
+            animation: drawPotrace 2.5s ease-out forwards, fillPotrace 0.8s ease-out 2.5s forwards;
+        }
+
+        .slide-up-fade {
+            animation: slideUpFade 1s ease-out 1.5s forwards;
+            opacity: 0;
+        }
+        .fade-in {
+            animation: fadeIn 0.7s ease-out forwards;
+        }
+
+        .hidden-custom { display: none !important; }
+    </style>
+</head>
+<body class="bg-white text-neutral-900 selection:bg-black selection:text-white transition-colors duration-300">
+
+    <!-- 
+      DARK MODE TOGGLE BUTTON
+    -->
+    <button id="theme-toggle" onclick="toggleDarkMode()" class="fixed top-3 right-14 md:top-6 md:right-10 z-[60] p-2 rounded-full bg-white/80 dark:bg-zinc-800/80 shadow-md hover:scale-110 transition-all text-black dark:text-white border border-neutral-200 dark:border-zinc-600">
+        <i data-lucide="sun" id="icon-sun" class="block dark:hidden" width="20"></i>
+        <i data-lucide="moon" id="icon-moon" class="hidden dark:block" width="20"></i>
+    </button>
+
+    <!-- 
+      SECTION 1: LOADING SCREEN
+    -->
+    <div id="loading-screen" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white transition-opacity duration-500 text-black">
+        
+        <div class="relative mb-2 w-40 h-20">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+             width="100%" height="100%" viewBox="0 0 300.000000 154.000000"
+             preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(0.000000,154.000000) scale(0.050000,-0.050000)"
+                fill="none" stroke="none">
+                    <path class="draw-potrace" d="M3699 2762 c-104 -88 -296 -250 -426 -361 -273 -231 -266 -229 -389
+                    -113 -52 48 -148 130 -214 183 -220 176 -339 276 -421 353 l-82 77 -248 -203
+                    c-137 -111 -289 -240 -339 -286 -49 -46 -198 -173 -330 -282 -132 -109 -321
+                    -265 -420 -348 l-180 -149 -10 208 -10 209 -150 5 c-82 3 -171 16 -196 29 -70
+                    36 -169 -64 -118 -120 31 -34 34 -115 34 -848 0 -724 3 -813 32 -824 64 -25
+                    68 18 68 829 l0 819 120 0 120 0 0 -808 c0 -682 5 -811 29 -831 65 -54 71 -3
+                    71 597 l0 596 155 129 c85 72 335 277 555 457 220 180 451 374 512 430 62 57
+                    154 137 205 179 l93 75 235 -195 c129 -108 271 -230 315 -270 44 -41 110 -100
+                    146 -132 l66 -57 -243 -200 c-250 -206 -279 -238 -279 -309 0 -66 30 -50 215
+                    114 96 85 204 178 239 205 156 123 845 696 932 776 l97 88 43 -39 c24 -21 134
+                    -114 244 -206 110 -92 209 -178 220 -190 19 -23 507 -427 925 -768 l205 -167
+                    0 -284 c0 -304 19 -369 90 -310 24 20 30 82 30 320 l0 296 -115 99 c-63 55
+                    -277 232 -475 395 -198 163 -373 311 -390 329 -16 18 -160 140 -320 270 -159
+                    131 -327 272 -371 315 l-81 77 -189 -159z"/>
+                    <path class="draw-potrace" d="M1918 2363 c-128 -106 -303 -256 -390 -334 -147 -132 -645 -545 -730
+                    -606 -36 -26 -38 -61 -38 -585 l0 -558 2550 0 2550 0 0 648 0 647 -345 287
+                    c-741 614 -665 560 -705 504 -22 -30 5 -59 227 -242 139 -114 358 -294 487
+                    -401 l234 -193 1 -575 1 -575 -720 0 -720 0 0 558 c0 438 -6 562 -26 579 -35
+                    29 -74 -8 -74 -71 l0 -46 -400 0 c-378 0 -400 2 -400 38 0 20 -12 47 -26 59
+                    -55 46 -74 -18 -74 -251 l0 -226 -340 0 -340 0 0 -320 0 -320 -890 0 -890 0 1
+                    485 2 485 473 387 c261 213 555 458 653 545 214 188 170 185 348 27 143 -128
+                    148 -130 187 -96 39 36 39 37 -19 87 -33 27 -114 97 -181 155 -153 132 -132
+                    137 -406 -92z m2302 -1523 l0 -460 -400 0 -400 0 0 460 0 460 400 0 400 0 0
+                    -460z m-900 -200 l0 -260 -290 0 -290 0 0 260 0 260 290 0 290 0 0 -260z"/>
+                </g>
+            </svg>
+        </div>
+        <div class="text-center px-4 slide-up-fade">
+            <p class="text-3xl md:text-5xl font-bold uppercase tracking-widest text-neutral-900 mb-4">Architecture Portfolio</p>
+            <h1 class="text-lg md:text-2xl font-light tracking-[0.2em] text-neutral-500">Ar. Megan Cristel B. Cruz</h1>
+        </div>
+    </div>
+
+    <!-- 
+      SECTION 2: MAIN APP CONTAINER
+    -->
+    <div id="app-content" class="hidden-custom flex flex-col md:flex-row min-h-screen">
+        
+        <!-- 
+          SIDEBAR NAVIGATION (Left Side)
+        -->
+        <nav class="sticky top-0 left-0 w-full md:w-[300px] md:h-screen bg-neutral-200 md:bg-white dark:bg-zinc-800 md:border-r border-neutral-200 dark:border-zinc-700 z-50 flex flex-col justify-between p-3 md:p-12 shadow-sm md:shadow-none transition-colors duration-300">
+            
+            <!-- Header (Logo + Hamburger) -->
+            <div class="flex justify-between items-start md:block">
+                <div class="flex flex-col">
+                    
+                    <!-- Responsive Layout Container -->
+                    <!-- Mobile: Side-by-Side (flex-row) | Desktop: Stacked (md:flex-col) --> 
+                    <div class="flex flex-row md:flex-col items-center md:items-start gap-1 md:gap-0 mb-0">
+                        <!-- Logo -->
+                        <div class="w-8 h-4 md:w-16 md:h-8 text-black dark:text-white shrink-0 mb-0">
+                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                            width="100%" height="100%" viewBox="0 0 300.000000 154.000000"
+                            preserveAspectRatio="xMidYMid meet">
+                               <g transform="translate(0.000000,154.000000) scale(0.050000,-0.050000)"
+                               class="fill-current" stroke="none">
+                                   <path d="M3699 2762 c-104 -88 -296 -250 -426 -361 -273 -231 -266 -229 -389
+                                   -113 -52 48 -148 130 -214 183 -220 176 -339 276 -421 353 l-82 77 -248 -203
+                                   c-137 -111 -289 -240 -339 -286 -49 -46 -198 -173 -330 -282 -132 -109 -321
+                                   -265 -420 -348 l-180 -149 -10 208 -10 209 -150 5 c-82 3 -171 16 -196 29 -70
+                                   36 -169 -64 -118 -120 31 -34 34 -115 34 -848 0 -724 3 -813 32 -824 64 -25
+                                   68 18 68 829 l0 819 120 0 120 0 0 -808 c0 -682 5 -811 29 -831 65 -54 71 -3
+                                   71 597 l0 596 155 129 c85 72 335 277 555 457 220 180 451 374 512 430 62 57
+                                   154 137 205 179 l93 75 235 -195 c129 -108 271 -230 315 -270 44 -41 110 -100
+                                   146 -132 l66 -57 -243 -200 c-250 -206 -279 -238 -279 -309 0 -66 30 -50 215
+                                   114 96 85 204 178 239 205 156 123 845 696 932 776 l97 88 43 -39 c24 -21 134
+                                   -114 244 -206 110 -92 209 -178 220 -190 19 -23 507 -427 925 -768 l205 -167
+                                   0 -284 c0 -304 19 -369 90 -310 24 20 30 82 30 320 l0 296 -115 99 c-63 55
+                                   -277 232 -475 395 -198 163 -373 311 -390 329 -16 18 -160 140 -320 270 -159
+                                   131 -327 272 -371 315 l-81 77 -189 -159z"/>
+                                   <path d="M1918 2363 c-128 -106 -303 -256 -390 -334 -147 -132 -645 -545 -730
+                                   -606 -36 -26 -38 -61 -38 -585 l0 -558 2550 0 2550 0 0 648 0 647 -345 287
+                                   c-741 614 -665 560 -705 504 -22 -30 5 -59 227 -242 139 -114 358 -294 487
+                                   -401 l234 -193 1 -575 1 -575 -720 0 -720 0 0 558 c0 438 -6 562 -26 579 -35
+                                   29 -74 -8 -74 -71 l0 -46 -400 0 c-378 0 -400 2 -400 38 0 20 -12 47 -26 59
+                                   -55 46 -74 -18 -74 -251 l0 -226 -340 0 -340 0 0 -320 0 -320 -890 0 -890 0 1
+                                   485 2 485 473 387 c261 213 555 458 653 545 214 188 170 185 348 27 143 -128
+                                   148 -130 187 -96 39 36 39 37 -19 87 -33 27 -114 97 -181 155 -153 132 -132
+                                   137 -406 -92z m2302 -1523 l0 -460 -400 0 -400 0 0 460 0 460 400 0 400 0 0
+                                   -460z m-900 -200 l0 -260 -290 0 -290 0 0 260 0 260 290 0 290 0 0 -260z"/>
+                               </g>
+                           </svg>
+                        </div>
+                        <!-- Name -->
+                        <h1 class="text-lg md:text-2xl font-bold tracking-tighter text-black dark:text-white pt-1">MEGAN CRUZ</h1>
+                    </div>
+
+                    <!-- Texts (Below Logo/Name row) -->
+                    <div class="-mt-1 md:mt-0">
+                        <p class="text-[10px] md:text-xs text-neutral-500 dark:text-zinc-300 tracking-widest uppercase">Architecture Portfolio</p>
+                        <p class="text-[10px] md:text-xs text-neutral-400 dark:text-zinc-400 tracking-widest uppercase">Selected Works 2019-2025</p>
+                    </div>
+                </div>
+
+                <!-- Hamburger Menu Button -->
+                <button class="md:hidden text-black dark:text-white mt-3" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex flex-col gap-6 mt-12">
+                <button onclick="switchTab('Projects')" id="nav-Projects" class="text-left text-sm uppercase tracking-widest transition-all duration-300 text-black dark:text-white font-bold pl-4 border-l-2 border-black dark:border-white">Projects</button>
+                <button onclick="switchTab('about')" id="nav-about" class="text-left text-sm uppercase tracking-widest transition-all duration-300 text-neutral-400 dark:text-zinc-300 hover:text-black dark:hover:text-white hover:pl-2">About me</button>
+            </div>
+
+            <!-- Footer Info / Get In Touch (Desktop Sidebar) -->
+            <div class="hidden md:block">
+                <div class="mb-4">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-black dark:text-white mb-3">Get in Touch</h3>
+                    <p class="text-[11px] text-neutral-500 dark:text-zinc-300 font-light leading-relaxed">I'm currently available for new projects and collaborations.</p>
+                </div>
+                
+                <div class="flex gap-4 mb-4">
+                    <a href="mailto:armegcruz@gmail.com" class="text-neutral-400 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors" title="Email Me"><i data-lucide="mail" width="18" stroke-width="3"></i></a>
+                    <a href="https://www.linkedin.com/in/ar-megancruz/" target="_blank" class="text-neutral-400 hover:text-black dark:text-zinc-400 dark:hover:text-white transition-colors" title="LinkedIn"><i data-lucide="linkedin" width="18" stroke-width="3"></i></a>
+                </div>
+
+                <div class="space-y-1">
+                    <p class="text-[10px] text-neutral-400 dark:text-zinc-500">© 2025 Megan Cristel B. Cruz</p>
+                    <p class="text-[10px] text-neutral-400 dark:text-zinc-500">All rights reserved.</p>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu" class="hidden-custom absolute top-full left-0 w-full bg-white dark:bg-zinc-800 border-b border-neutral-200 dark:border-zinc-700 p-6 flex flex-col gap-4 shadow-xl md:hidden h-[calc(100vh-80px)] overflow-y-auto">
+                <button onclick="switchTab('Projects'); toggleMobileMenu()" class="text-left text-lg py-2 font-bold text-neutral-900 dark:text-white">Projects</button>
+                <button onclick="switchTab('about'); toggleMobileMenu()" class="text-left text-lg py-2 text-neutral-500 dark:text-zinc-300">About me</button>
+                
+                <div class="mt-4 pt-4 border-t border-neutral-100 dark:border-zinc-700">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-black dark:text-white mb-3">Get in Touch</h3>
+                    <p class="text-xs text-neutral-500 dark:text-zinc-300 font-light leading-relaxed mb-6">I'm currently available for new projects and collaborations.</p>
+                    
+                    <div class="flex gap-6 mb-4">
+                        <a href="mailto:armegcruz@gmail.com" class="text-black dark:text-white"><i data-lucide="mail" width="24" stroke-width="3"></i></a>
+                        <a href="https://www.linkedin.com/in/ar-megancruz/" target="_blank" class="text-black dark:text-white"><i data-lucide="linkedin" width="24" stroke-width="3"></i></a>
+                    </div>
+                    <p class="text-xs text-neutral-400 dark:text-zinc-400">© 2025 Megan Cristel B. Cruz<br/>All rights reserved.</p>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 
+          MAIN CONTENT AREA (Right Side) 
+        -->
+        <main class="flex-1 md:ml-0 w-full relative">
+            <div class="w-full">
+                
+                <!-- TAB 1: Projects SECTION -->
+                <div id="section-Projects" class="w-full min-h-screen pb-24 bg-white dark:bg-zinc-750 transition-colors duration-300">
+                    <!-- Filter Bar -->
+                    <div id="filter-container" class="flex flex-wrap gap-x-3 gap-y-2 md:gap-x-6 mb-6 border-b border-neutral-200 dark:border-zinc-600 px-6 md:px-12 pb-2 md:py-6 sticky top-20 md:top-0 bg-white/90 dark:bg-zinc-750/90 backdrop-blur-sm z-30 pt-1">
+                    </div>
+
+                    <!-- Project Grid -->
+                    <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 px-6 md:px-12">
+                    </div>
+                    
+                    <div id="no-projects" class="hidden-custom text-center py-20 text-neutral-400 dark:text-zinc-300">
+                        No projects found in this category.
+                    </div>
+                </div>
+
+                <!-- TAB 2: ABOUT SECTION -->
+                <div id="section-about" class="hidden-custom w-full min-h-screen p-6 md:p-24 flex flex-col justify-center bg-white dark:bg-zinc-750 transition-colors duration-300">
+                    <div class="max-w-4xl w-full mx-auto">
+                        <div class="flex flex-col md:flex-row gap-12 items-start mb-20">
+                            <!-- Profile Picture -->
+                            <div class="w-32 h-32 md:w-48 md:h-48 bg-neutral-200 rounded-full overflow-hidden flex-shrink-0 border-2 dark:border-zinc-500">
+                                <img src="CV Photo.png" alt="Profile" class="w-full h-full object-cover">
+                            </div>
+                            
+                            <!-- Profile Bio Text -->
+                            <div>
+                                <h2 class="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-zinc-300 mb-2">About Me</h2>
+                                <h1 class="text-4xl font-light mb-6 text-black dark:text-white" id="profile-name"></h1>
+                                <p class="text-xl text-neutral-600 dark:text-zinc-200 font-light leading-relaxed mb-6" id="profile-bio"></p>
+                                
+                                <div class="flex gap-4">
+                                    <a href="MCBC-CV2026.pdf" download="MCBC-CV2026.pdf" class="flex items-center gap-2 px-6 py-3 bg-black text-white text-sm uppercase tracking-widest hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 transition-colors">
+                                        <i data-lucide="download" width="16"></i> Download CV
+                                    </a>
+                                    <a href="mailto:armegcruz@gmail.com" class="flex items-center gap-2 px-6 py-3 border border-black dark:border-zinc-400 text-black dark:text-zinc-100 text-sm uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-zinc-600 transition-colors">
+                                        <i data-lucide="mail" width="16"></i> Contact Me
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CV Details Grid -->
+                        <div class="grid md:grid-cols-2 gap-12 text-neutral-900 dark:text-zinc-100">
+                            
+                            <!-- Left Column: Education & Experience -->
+                            <div class="space-y-12">
+                                <!-- Education -->
+                                <div>
+                                    <h3 class="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-zinc-300 mb-8 border-b border-neutral-200 dark:border-zinc-600 pb-2">Education</h3>
+                                    <div class="space-y-8" id="education-list"></div>
+                                </div>
+                            <!-- Right Column: Expertise & License -->
+                            <div class="space-y-12">
+                                <!-- Expertise -->
+                                <div>
+                                    <h3 class="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-zinc-300 mb-8 border-b border-neutral-200 dark:border-zinc-600 pb-2">Expertise & Tools</h3>
+                                    <div class="grid grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 class="font-medium mb-3 text-black dark:text-white">Services</h4>
+                                            <ul class="text-neutral-600 dark:text-zinc-300 font-light space-y-1 text-sm">
+                                                <li>Planning and Design</li>
+                                                <li>Architectural Interiors</li>
+                                                <li>3D Perspective</li>
+                                                <li>Walkthrough Animation</li>
+                                                <li>BoQ/Cost Estimates</li>
+												<li>Project Management</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-medium mb-3 text-black dark:text-white">Software</h4>
+                                            <ul class="text-neutral-600 dark:text-zinc-300 font-light space-y-1 text-sm">
+                                                <li>AutoCAD</li>
+                                                <li>Revit</li>
+                                                <li>SketchUp</li>
+                                                <li>Lumion</li>
+                                                <li>Adobe Photoshop</li>
+                                                <li>Adobe Premiere Pro</li>
+                                                <li>MS Office</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- License & Certificates -->
+                                <div>
+                                    <h3 class="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-zinc-300 mb-8 border-b border-neutral-200 dark:border-zinc-600 pb-2">License</h3>
+                                    <div class="space-y-4" id="license-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- 
+      PROJECT POPUP MODAL
+    -->
+    <div id="project-modal" class="hidden-custom fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-sm fade-in">
+        <div class="bg-white dark:bg-zinc-800 w-full max-w-[90vw] h-full max-h-[90vh] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-neutral-100 dark:border-zinc-700 relative text-neutral-900 dark:text-zinc-100">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 p-2 bg-white dark:bg-zinc-750 rounded-full hover:bg-neutral-100 dark:hover:bg-zinc-600 transition-colors">
+                <i data-lucide="x" width="24"></i>
+            </button>
+
+            <!-- Modal Image Side -->
+            <div class="w-full md:w-3/4 h-1/2 md:h-full bg-neutral-100 dark:bg-zinc-900 relative group overflow-hidden bg-black/5">
+                <img id="modal-image" src="" alt="" class="w-full h-full object-contain md:object-cover transition-transform duration-700">
+                
+                <button id="btn-prev" onclick="prevImage(event)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-zinc-750/80 hover:bg-white text-black dark:text-white p-2 rounded-full shadow-lg transition-all z-20 opacity-0 group-hover:opacity-100 hidden-custom">
+                    <i data-lucide="chevron-left" width="24"></i>
+                </button>
+                <button id="btn-next" onclick="nextImage(event)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-zinc-750/80 hover:bg-white text-black dark:text-white p-2 rounded-full shadow-lg transition-all z-20 opacity-0 group-hover:opacity-100 hidden-custom">
+                    <i data-lucide="chevron-right" width="24"></i>
+                </button>
+
+                <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black/50 to-transparent text-white w-full z-10 pointer-events-none">
+                    <span id="modal-category" class="uppercase tracking-widest text-xs font-semibold mb-2 block opacity-80"></span>
+                    <h2 id="modal-title" class="text-3xl md:text-5xl font-light"></h2>
+                </div>
+            </div>
+
+            <!-- Modal Content Side -->
+            <div class="w-full md:w-1/4 h-1/2 md:h-full overflow-y-auto p-8 md:p-12 flex flex-col">
+                <div class="mb-8">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-zinc-400 mb-4">Project Description</h3>
+                    <p id="modal-description" class="text-neutral-600 dark:text-zinc-200 leading-relaxed text-lg font-light"></p>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-zinc-400 mb-4">Project Info</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between border-b border-neutral-100 dark:border-zinc-700 pb-2">
+                            <span class="text-neutral-500 dark:text-zinc-400">Year</span>
+                            <span id="modal-year" class="font-medium"></span>
+                        </div>
+                        <div class="flex justify-between border-b border-neutral-100 dark:border-zinc-700 pb-2">
+                            <span class="text-neutral-500 dark:text-zinc-400">Location</span>
+                            <span id="modal-location" class="font-medium"></span>
+                        </div>
+                        <div class="flex justify-between border-b border-neutral-100 dark:border-zinc-700 pb-2">
+                            <span class="text-neutral-500 dark:text-zinc-400">Area</span>
+                            <span id="modal-area" class="font-medium"></span>
+                        </div>
+                        <div id="modal-scope-container" class="flex justify-between border-b border-neutral-100 dark:border-zinc-700 pb-2 hidden-custom">
+                            <span class="text-neutral-500 dark:text-zinc-400">Scope</span>
+                            <span id="modal-scope" class="font-medium text-right pl-4"></span>
+                        </div>
+                        <div class="flex justify-between border-b border-neutral-100 dark:border-zinc-700 pb-2">
+                            <span class="text-neutral-500 dark:text-zinc-400">Status</span>
+                            <span id="modal-status" class="font-medium"></span>
+                        </div>
+                        <div class="flex justify-between border-b border-neutral-100 dark:border-zinc-700 pb-2">
+                            <span class="text-neutral-500 dark:text-zinc-400">Client</span>
+                            <span id="modal-client" class="font-medium"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-zinc-400 mb-4">Software Used</h3>
+                    <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dark Mode Logic: Force Default Light Mode
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                html.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        }
+
+        // Initialize: Check localStorage. If 'dark', enable it. Otherwise, default to LIGHT.
+        if (localStorage.theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        
+        // Slideshow Variables
+        let slideshowIntervals = {};
+
+        const PROFILE = {
+            name: "MEGAN CRISTEL B. CRUZ",
+            title: "Architect",
+            location: "Philippines",
+            email: "armegcruz@gmail.com",
+            education: [
+                { year: "2014 - 2019", degree: "Bachelor of Science in Architecture", school: "Saint Louis University", location: "Baguio City" }
+            ],
+            License: [
+                { name: "Registered Architect", issuer: "Professional Regulation Commission", year: "2025" },
+            ]
+        };
+
+        const PROJECTS = [
+            {
+                id: 1,
+                title: "Perida-Bernardino Building",
+                category: "Residential & Commercial",
+                scope: "Planning & design", 
+                year: "2025",
+                location: "Nueva Ecija, Philippines",
+                images: [
+                    "MIXED USE PERSPECTIVE_10 - Photo.jpg", 
+                    "MIXED USE PERSPECTIVE_1 - Photo.jpg",
+					"MIXED USE PERSPECTIVE_3 - Photo.jpg",
+					"MIXED USE PERSPECTIVE_4 - Photo.jpg",
+					"MIXED USE PERSPECTIVE_6 - Photo.jpg",
+					"MIXED USE PERSPECTIVE_7 - Photo.jpg",
+					"MIXED USE PERSPECTIVE_8 - Photo.jpg"
+					
+                ], 
+                description: "A modern 3-storey mixed-use development designed as a complete hospitality and lifestyle hub. The ground floor features a cafe and multi-purpose hall, both opening onto the side and rear courtyards, where an outdoor swimming pool is located. The second floor features a fitness gym and another multi purpose hall, while the third floor is dedicated to hospitality, offering studio units for short-term stays. The building design utilizes a high-contrast palette of yellow orange and gray, a rhythmic geometric massing, and climate-responsive shading (brise-soleil), to create a landmark at the city that feels both industrial and approachable.",
+                tags: ["AutoCAD", "SketchUp", "Lumion", "Photoshop"],
+                specs: { area: "905 sqm", status: "Design Proposal", client: "" }
+            },
+            {
+                id: 2,
+                title: "Oni Building",
+                category: "Residential & Commercial",
+                scope: "Exterior design",
+                year: "2022",
+                location: "Nueva Ecija, Philippines",
+                images: [
+                    "Oni Bldg 2.jpg",
+                    "Oni Bldg.jpg",
+					"Oni Bldg Night.jpg"
+                ],
+                description: "This building is a contemporary 2-storey mixed-use development with commercial spaces at the ground floor and apartment units at the second floor. The facade is defined by a bold, asymmetrical design with monochromatic color scheme and wood textures to add warmth.",
+                tags: ["AutoCAD", "SketchUp", "Lumion", "Photoshop"],
+                specs: { area: "", status: "Design Concept", client: "" }
+            },
+			{
+                id: 4,
+                title: "4-Storey Residential with roof deck",
+                category: "Residential & Commercial",
+                scope: "Planning & design, project supervision",
+                year: "2023",
+                location: "Nueva Ecija, Philippines",
+                images: [
+                    "kitid (1).jpg",
+                    "kitid (2).jpg",
+                    "kitid (3).jpg",
+                ],
+                description: "The design of this residence utilizes vertical lines, double height glazing, and projecting volumes, overcoming the spatial constraints of the narrow lot, delivering a home that feels open, modern and distinct.",
+                tags: ["AutoCAD", "SketchUp", "Lumion", "Photoshop"],
+                specs: { area: "320 sqm", status: "Built", client: "" }
+            },
+			{
+                id: 5,
+                title: "L-shaped Residence",
+                category: "Residential & Commercial",
+                scope: "Planning & design, project supervision",
+                year: "2022",
+                location: "Nueva Ecija, Philippines",
+                images: [
+                    "Lshaped (1).jpg",
+                    "Lshaped (3).jpg",
+                    "Lshaped (2).jpg",
+					"Lshaped (4).jpg",
+                ],
+                description: "This project is a contemporary private residential building with 2 bedroom at the second floor. Characterized by a dynamic, asymmetrical facade and an L-shaped plan designed to fit a narrow lot while maximizing natural light and ventilation.",
+                tags: ["AutoCAD", "SketchUp", "Lumion", "Photoshop"],
+                specs: { area: "110 sqm", status: "Built", client: "" }
+            },
+            {
+                id: 6,
+                title: "14-Unit Apartment",
+                category: "Residential & Commercial",
+				scope: "Planning & design",
+                year: "2022",
+                location: "Nueva Ecija, Philippines",
+                images: [
+                    "10 units 1.jpg",
+                    "10 units 2.jpg",
+                ],
+                description: "These apartment buildings utilizes strategies to keep costs low without sacrificing its building appeal.",
+                tags: ["AutoCAD", "Sketchup", "Lumion"],
+                specs: { area: "80 sqm", status: "Built", client: "" }
+            },
+			{
+                id: 7,
+                title: "Tropical Bungalow",
+                category: "Residential & Commercial",
+				scope: "Planning & design",
+                year: "2021",
+                location: "Nueva Ecija, Philippines",
+                images: [
+                    "Bungalow 1.jpg",
+                    "Bungalow 2.jpg"
+                ],
+                description: "This residence reimagines the classic Philippines' bungalow by introducing a twin gable concept. The design approach focuses on symmetry, warmth and coziness.",
+                tags: ["Revit", "Lumion"],
+                specs: { area: "80 sqm", status: "Design Proposal", client: "" }
+            },
+			{
+                id: 9,
+                title: "Narrow Mono House",
+                category: "Residential & Commercial",
+				scope: "Planning & design",
+                year: "2019",
+                location: "Nueva Ecija, Philippines",
+                images: [
+                    "CIELO HOUSE (1).jpg",
+                    "CIELO HOUSE (2).jpg",
+					"CIELO HOUSE (3).jpg"
+                ],
+                description: "This residence is a response to the challenge of high-density urban living. Maximizing a narrow lot to accommodate 2 bedrooms without sacrificing natural ventilation and outdoor open spaces.",
+                tags: ["AutoCAD", "Sketchup", "Lumion"],
+                specs: { area: "220 sqm", status: "Proposal", client: "" }
+            },
+            {
+                id: 10,
+                title: "Law Firm Office",
+                category: "Interiors",
+                year: "2025",
+                location: "BGC, Taguig",
+                images: [
+                    "Law Firm 1.jpg",
+                    "Law Firm 2.jpg",
+                    "Law Firm 3.jpg",
+                ],
+                description: "Interior design focusing on natural light, wood textures, and open space planning to create a calm urban sanctuary.",
+                tags: ["SketchUp", "Lumion", "Photoshop"],
+                specs: { area: "120 sqm", status: "Built", client: "" }
+            },
+            {
+                id: 11,
+                title: "Residential Renovation: Living Room, Master's Bedroom, Bedroom w/ Mezzanine, Office, Pool",
+                category: "Interiors",
+				scope: "Planning & design",
+                year: "2022",
+                location: "Nueva Ecija, Philippines",
+                images: [
+                    "R INT LIVING ROOM - Photo.jpg",
+                    "R INT LIVING ROOM_3 - Photo.jpg",
+                    "R INT MASTER'S BEDROOM_6 - Photo.jpg",
+					"R INT MASTER'S BEDROOM_7 - Photo.jpg",
+					"R INT br with loft.png",
+					"R INT br with loft 2.png",
+					"R INT office 2.png",
+					"R INT office.png",
+					"R INT pool.jpg",
+					"R INT pool 2.jpg",
+                ],
+                description: "Interior design focusing on natural light, wood textures, and open space planning to create a calm urban sanctuary.",
+                tags: ["Revit", "Lumion", "Photoshop"],
+                specs: { area: "120 sqm", status: "Built", client: "Private" }
+            },
+            {
+                id: 13,
+                title: "Retail: Detailed Design Drawings",
+                category: "Shop Drawings",
+                scope: "Technical drafting and documentation. Commisioned by a 3rd party company",
+                year: "2025",
+                location: "UAE",
+                images: [
+                    "DD 1.png",
+                    "DD 2.png",
+					"DD 3.png",
+					"DD 4.png",
+					"DD 5.png",
+					"DD 6.png",
+					"DD 7.png",
+					"DD 9.png",
+					"DD 10.png",
+					"DD 11.png",
+					"DD 12.png",
+					"DD 14.png",
+					"DD 15.png",
+					"DD 16.png",
+					"DD 17.png"					
+                ], 
+                description: "Detailed drawings of retail stores for various mall locations in the UAE. These drawings are presented solely to demonstrate technical drafting capabilities. All intellectual property rights regarding the furniture, fixtures and interior design remain with the respective Architects or Companies. My role was limited strictly to technical drafting and documentation.",
+                tags: ["AutoCAD", "SketchUp"],
+                specs: { area: "", status: "", client: "" }
+            },
+            {
+                id: 14,
+                title: "2-Storey Residential Drawings",
+                category: "Shop Drawings",
+                scope: "Planning and design",
+                year: "2019-2025",
+                location: "Philippines",
+                images: [
+                    "2-Storey, Kapt. Pepe (1).png",
+					"2-Storey, Kapt. Pepe (14).png",
+					"2-Storey, Kapt. Pepe (12).png",
+					"2-Storey, Kapt. Pepe (11).png",
+					"2-Storey, Kapt. Pepe (10).png",
+					"2-Storey, Kapt. Pepe (3).png",
+					"2-Storey, Kapt. Pepe (2).png",
+					"2-Storey, Kapt. Pepe (13).png",
+					"2-Storey, Kapt. Pepe (9).png",
+					"2-Storey, Kapt. Pepe (8).png",
+					"2-Storey, Kapt. Pepe (7).png",
+					"2-Storey, Kapt. Pepe (6).png",
+					"2-Storey, Kapt. Pepe (5).png",
+					"2-Storey, Kapt. Pepe (4).png",
+                ],
+                description: "This section features a comprehensive set of working drawings for a 2-storey residential project, fully compliant with the National Building Code of the Philippines",
+                tags: ["AutoCAD"],
+                specs: { area: "", status: "", client: "" }
+            },		
+            // WALKTHROUGHS integrated as Projects with type='video'
+            {
+                id: 17,
+                title: "2-Storey Residential",
+                category: "Walkthrough",
+                year: "2025",
+                location: "N/A",
+                type: "video",
+                src: "https://www.youtube.com/embed/dQw4w9WgXcQ", 
+                description: "A tour of the 2-storey extension showcasing the interior design and layout.",
+                tags: ["Lumion", "Premiere Pro"],
+                specs: { area: "", status: "", client: "" }
+            },
+        ];
+
+        const categories = ['All', 'Residential & Commercial', 'Interiors', 'Shop Drawings', 'Walkthrough'];
+        let currentFilter = 'All';
+        
+        // Gallery State
+        let currentImageIndex = 0;
+        let currentProjectImages = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            renderProfile();
+            renderFilters();
+            renderProjects();
+            
+            document.addEventListener('contextmenu', event => {
+                if (event.target.tagName === 'IMG') {
+                    event.preventDefault();
+                }
+            });
+
+            setTimeout(() => {
+                const loader = document.getElementById('loading-screen');
+                const app = document.getElementById('app-content');
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    app.classList.remove('hidden-custom');
+                    app.classList.add('fade-in');
+                }, 500);
+            }, 3500);
+        });
+
+        // Slideshow Functions
+        function startSlideshow(element, projectId) {
+            const project = PROJECTS.find(p => p.id === projectId);
+            // Only start if there are multiple images
+            if (!project || !project.images || project.images.length <= 1) return;
+
+            // Select all img tags in the card (covers both desktop and mobile versions)
+            const imgElements = element.querySelectorAll('img');
+            if (imgElements.length === 0) return;
+
+            let currentIndex = 0;
+            
+            // Clear existing interval if any
+            if (slideshowIntervals[projectId]) clearInterval(slideshowIntervals[projectId]);
+
+            // Cycle images every 1.2s (1200ms)
+            slideshowIntervals[projectId] = setInterval(() => {
+                const nextIndex = (currentIndex + 1) % project.images.length;
+                
+                // Slideshow wrappers within this card (mobile and desktop versions)
+                const wrappers = element.querySelectorAll('.image-stack');
+                
+                wrappers.forEach(wrapper => {
+                    const images = wrapper.querySelectorAll('img');
+                    // Fade out current
+                    if(images[currentIndex]) {
+                        images[currentIndex].classList.remove('opacity-100');
+                        images[currentIndex].classList.add('opacity-0');
+                    }
+                    // Fade in next
+                    if(images[nextIndex]) {
+                        images[nextIndex].classList.remove('opacity-0');
+                        images[nextIndex].classList.add('opacity-100');
+                    }
+                });
+                
+                currentIndex = nextIndex;
+            }, 1200); 
+        }
+
+        function stopSlideshow(element, projectId) {
+            if (slideshowIntervals[projectId]) {
+                clearInterval(slideshowIntervals[projectId]);
+                delete slideshowIntervals[projectId];
+            }
+            
+            // Reset to the first image (cover)
+            const wrappers = element.querySelectorAll('.image-stack');
+            wrappers.forEach(wrapper => {
+                const images = wrapper.querySelectorAll('img');
+                images.forEach((img, i) => {
+                    if (i === 0) {
+                        img.classList.remove('opacity-0');
+                        img.classList.add('opacity-100');
+                    } else {
+                        img.classList.remove('opacity-100');
+                        img.classList.add('opacity-0');
+                    }
+                });
+            });
+        }
+
+        function switchTab(tab) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            const ProjectsSection = document.getElementById('section-Projects');
+            const aboutSection = document.getElementById('section-about');
+            
+            const navProjects = document.getElementById('nav-Projects');
+            const navAbout = document.getElementById('nav-about');
+
+            ProjectsSection.classList.add('hidden-custom');
+            aboutSection.classList.add('hidden-custom');
+
+            // Reset classes reverted to standard black/neutral
+            navProjects.className = "text-left text-sm uppercase tracking-widest transition-all duration-300 text-neutral-400 hover:text-black dark:text-zinc-300 dark:hover:text-white hover:pl-2";
+            navAbout.className = "text-left text-sm uppercase tracking-widest transition-all duration-300 text-neutral-400 hover:text-black dark:text-zinc-300 dark:hover:text-white hover:pl-2";
+
+            if (tab === 'Projects') {
+                ProjectsSection.classList.remove('hidden-custom');
+                // Active state: Standard Black with Black border
+                navProjects.className = "text-left text-sm uppercase tracking-widest transition-all duration-300 text-black dark:text-white font-bold pl-4 border-l-2 border-black dark:border-white";
+            } else if (tab === 'about') {
+                aboutSection.classList.remove('hidden-custom');
+                // Active state: Standard Black with Black border
+                navAbout.className = "text-left text-sm uppercase tracking-widest transition-all duration-300 text-black dark:text-white font-bold pl-4 border-l-2 border-black dark:border-white";
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            
+            if (menu.classList.contains('hidden-custom')) {
+                menu.classList.remove('hidden-custom');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden-custom');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        function renderProfile() {
+            document.getElementById('profile-name').textContent = PROFILE.name;
+            document.getElementById('profile-bio').textContent = PROFILE.bio;
+
+            const eduList = document.getElementById('education-list');
+            eduList.innerHTML = PROFILE.education.map(edu => `
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-1">
+                       <h4 class="text-lg font-medium dark:text-white">${edu.school}</h4>
+                       <span class="text-sm text-neutral-400 dark:text-zinc-500 font-mono">${edu.year}</span>
+                    </div>
+                    <div class="flex justify-between items-center text-neutral-600 dark:text-zinc-200 font-light">
+                      <span>${edu.degree}</span>
+                      <span class="text-sm text-neutral-400 dark:text-zinc-300">${edu.location}</span>
+                    </div>
+                </div>
+            `).join('');
+
+            const licList = document.getElementById('license-list');
+            licList.innerHTML = PROFILE.License.map(lic => `
+                <div class="flex justify-between items-center border-b border-neutral-100 dark:border-zinc-600 pb-2">
+                    <span class="text-neutral-600 dark:text-zinc-200 font-light">${lic.name}</span>
+                    <span class="text-xs text-neutral-400 dark:text-zinc-300 uppercase tracking-widest">${lic.issuer} • ${lic.year}</span>
+                </div>
+            `).join('');
+        }
+
+        function renderFilters() {
+            const container = document.getElementById('filter-container');
+            container.innerHTML = categories.map(cat => `
+                <button 
+                    onclick="setFilter('${cat}')"
+                    class="text-xs uppercase tracking-widest transition-all px-3 py-1 rounded-md ${currentFilter === cat ? 'bg-neutral-200/60 dark:bg-zinc-800 text-black dark:text-white font-bold' : 'text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-zinc-600'}"
+                >
+                    ${cat}
+                </button>
+            `).join('');
+        }
+
+        function setFilter(cat) {
+            currentFilter = cat;
+            renderFilters();
+            renderProjects();
+        }
+
+        function renderProjects() {
+            const grid = document.getElementById('project-grid');
+            const noProjects = document.getElementById('no-projects');
+            const filtered = currentFilter === 'All' 
+                ? PROJECTS 
+                : PROJECTS.filter(p => p.category === currentFilter);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                noProjects.classList.remove('hidden-custom');
+                return;
+            }
+
+            noProjects.classList.add('hidden-custom');
+            grid.innerHTML = filtered.map((project, index) => {
+                const isWide = index % 3 === 0;
+                
+                // --- 1. VIDEO RENDER (Walkthroughs) ---
+                if (project.type === 'video') {
+                    return `
+                        <div class="group relative ${isWide ? 'md:col-span-2 md:aspect-[2/1]' : 'md:aspect-square'} aspect-video overflow-hidden bg-neutral-100 dark:bg-zinc-800">
+                            <iframe 
+                                src="${project.src}" 
+                                class="w-full h-full pointer-events-auto"
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                            <div class="absolute bottom-0 left-0 p-4 w-full bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                                <p class="text-[10px] text-white/80 uppercase tracking-widest mb-1">Walkthrough</p>
+                                <h3 class="text-xl font-light text-white">${project.title}</h3>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // --- 2. IMAGE RENDER ---
+                const mainImage = project.images && project.images.length > 0 ? project.images[0] : '';
+                
+                // Helper to generate stacked images
+                const generateImageStack = (images, title) => {
+                    return `
+                        <div class="image-stack absolute inset-0 w-full h-full">
+                            ${images.map((src, i) => `
+                                <img 
+                                    src="${src}" 
+                                    alt="${title}" 
+                                    class="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${i === 0 ? 'opacity-100' : 'opacity-0'} group-hover:scale-105"
+                                />
+                            `).join('')}
+                        </div>
+                    `;
+                };
+
+                // --- CASE A: LANDSCAPE CARD (Wide) ---
+                if (isWide) {
+                    return `
+                        <div 
+                            onclick="openModal(${project.id})"
+                            onmouseenter="startSlideshow(this, ${project.id})"
+                            onmouseleave="stopSlideshow(this, ${project.id})"
+                            class="group cursor-pointer relative md:col-span-2 md:aspect-[2/1] aspect-video overflow-hidden bg-neutral-100 dark:bg-zinc-800"
+                        >
+                            <!-- Mobile View: Full Overlay -->
+                            <div class="md:hidden relative w-full h-full">
+                                ${generateImageStack(project.images, project.title)}
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none z-10"></div>
+                                <div class="absolute bottom-0 left-0 p-6 w-full text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500 z-20">
+                                    <p class="text-[10px] uppercase tracking-widest mb-1 opacity-80">${project.category}</p>
+                                    <h3 class="text-2xl font-light">${project.title}</h3>
+                                </div>
+                            </div>
+
+                            <!-- Desktop View: Split Overlay -->
+                            <div class="hidden md:block w-full h-full relative">
+                                ${generateImageStack(project.images, project.title)}
+                                
+                                <!-- Desktop View: Right Side Light Gray Transparent Overlay -->
+                                <div class="absolute inset-y-0 right-0 w-1/3 bg-neutral-200/30 dark:bg-zinc-200/30 backdrop-blur-sm p-10 flex flex-col justify-center text-neutral-900 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0 z-20">
+                                    <div class="transform transition-transform duration-500 delay-75 translate-y-4 group-hover:translate-y-0">
+                                        <p class="text-xs font-bold uppercase tracking-widest text-neutral-800 mb-3">${project.category}</p>
+                                        <h3 class="text-3xl font-light mb-6 leading-tight text-black">${project.title}</h3>
+                                        <p class="text-sm font-light text-neutral-900 leading-relaxed line-clamp-5 mb-8">
+                                            ${project.description}
+                                        </p>
+                                        <div class="space-y-2 border-t border-neutral-500/50 pt-4">
+                                            <div class="flex justify-between text-xs text-neutral-800 uppercase tracking-wider">
+                                                <span>Year</span>
+                                                <span class="text-black font-medium">${project.year}</span>
+                                            </div>
+                                            <div class="flex justify-between text-xs text-neutral-800 uppercase tracking-wider">
+                                                <span>Location</span>
+                                                <span class="text-black font-medium">${project.location}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+
+                // --- CASE B: SQUARE CARD (Standard) ---
+                return `
+                    <div 
+                        onclick="openModal(${project.id})"
+                        onmouseenter="startSlideshow(this, ${project.id})"
+                        onmouseleave="stopSlideshow(this, ${project.id})"
+                        class="group cursor-pointer relative md:aspect-square aspect-video overflow-hidden bg-neutral-100 dark:bg-zinc-800"
+                    >
+                        ${generateImageStack(project.images, project.title)}
+                        
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none z-10"></div>
+                        
+                        <!-- Content -->
+                        <div class="absolute bottom-0 left-0 p-6 w-full text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500 z-20">
+                            <div class="flex justify-between items-end mb-2">
+                                <div>
+                                    <p class="text-[10px] uppercase tracking-widest mb-1 opacity-80">${project.category}</p>
+                                    <h3 class="text-2xl font-light">${project.title}</h3>
+                                </div>
+                                <!-- Arrow visible on hover -->
+                                <i data-lucide="arrow-up-right" class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mb-1" width="24"></i>
+                            </div>
+
+                            <!-- Desktop Only: Overview & Specs (Revealed on Hover) -->
+                            <div class="hidden md:block h-0 group-hover:h-auto overflow-hidden transition-all duration-500 opacity-0 group-hover:opacity-100">
+                                <div class="pt-2 border-t border-white/20 mt-2">
+                                    <p class="text-xs font-light text-white/90 leading-relaxed line-clamp-3 mb-3">
+                                        ${project.description}
+                                    </p>
+                                    <div class="flex gap-4 text-[10px] uppercase tracking-wider text-white/70">
+                                        <span>${project.year}</span>
+                                        <span>•</span>
+                                        <span>${project.location}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            lucide.createIcons();
+        }
+
+        function updateModalImage() {
+            const img = document.getElementById('modal-image');
+            img.src = currentProjectImages[currentImageIndex];
+
+            const prevBtn = document.getElementById('btn-prev');
+            const nextBtn = document.getElementById('btn-next');
+
+            if (currentProjectImages.length > 1) {
+                prevBtn.classList.remove('hidden-custom');
+                nextBtn.classList.remove('hidden-custom');
+            } else {
+                prevBtn.classList.add('hidden-custom');
+                nextBtn.classList.add('hidden-custom');
+            }
+        }
+
+        function nextImage(e) {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex + 1) % currentProjectImages.length;
+            updateModalImage();
+        }
+
+        function prevImage(e) {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex - 1 + currentProjectImages.length) % currentProjectImages.length;
+            updateModalImage();
+        }
+
+        function openModal(id) {
+            const project = PROJECTS.find(p => p.id === id);
+            if (!project) return;
+
+            if (project.type === 'video') return;
+
+            currentProjectImages = project.images;
+            currentImageIndex = 0;
+            updateModalImage();
+
+            const scopeEl = document.getElementById('modal-scope');
+            const scopeContainer = document.getElementById('modal-scope-container');
+            if (project.scope) {
+                scopeEl.textContent = project.scope;
+                scopeContainer.classList.remove('hidden-custom');
+            } else {
+                scopeContainer.classList.add('hidden-custom');
+            }
+
+            document.getElementById('modal-category').textContent = project.category;
+            document.getElementById('modal-title').textContent = project.title;
+            document.getElementById('modal-description').textContent = project.description;
+            document.getElementById('modal-year').textContent = project.year;
+            document.getElementById('modal-location').textContent = project.location;
+            document.getElementById('modal-area').textContent = project.specs.area;
+            document.getElementById('modal-status').textContent = project.specs.status;
+            document.getElementById('modal-client').textContent = project.specs.client;
+            
+            document.getElementById('modal-tags').innerHTML = project.tags.map(tag => `
+                <span class="px-3 py-1 bg-neutral-100 dark:bg-zinc-750 text-neutral-600 dark:text-zinc-300 text-xs uppercase tracking-wide">${tag}</span>
+            `).join('');
+            
+            const modal = document.getElementById('project-modal');
+            modal.classList.remove('hidden-custom');
+            lucide.createIcons();
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').classList.add('hidden-custom');
+        }
+    </script>
+</body>
+</html>
